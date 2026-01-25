@@ -57,7 +57,9 @@ src/                # 源文件（已编译）
 
 ## 🚀 重新部署到 Cloudflare Pages
 
-### 方法一：更新 Dashboard 构建配置（推荐）
+### 方法一：更新 Dashboard 构建配置（推荐，必须！）
+
+**⚠️ 重要：构建命令必须在 Cloudflare Dashboard 中配置，不能在 wrangler.toml 中配置。**
 
 1. 访问 [Cloudflare Dashboard](https://dash.cloudflare.com/)
 2. 进入你的 Pages 项目：`exscite-net`
@@ -66,15 +68,19 @@ src/                # 源文件（已编译）
 
 ```
 Framework preset: Next.js
-Build command: npm run build:cf        ← 修改这里！
+Build command: npm run build:cf        ← 必须修改这里！
 Build output directory: .next
-Root directory: /
-Node version: 18
+Root directory: / (默认)
+Node version: 18 (自动检测)
 ```
 
 5. 点击 **Save**
 6. 进入 **Deployments** 标签
 7. 点击 **Retry deployment** 重新部署
+
+**为什么必须在 Dashboard 配置？**
+- Cloudflare Pages 的 `wrangler.toml` 不支持 `[build]` 配置
+- 构建命令只能通过 Dashboard 或 GitHub 集成时设置
 
 ---
 

@@ -2,16 +2,6 @@
 name = "exscite-net"
 compatibility_date = "2026-01-20"
 
-# Pages configuration
+# Pages build output directory
+# This is the ONLY configuration needed for Cloudflare Pages
 pages_build_output_dir = ".next"
-
-# Exclude patterns (files to ignore during deployment)
-# This helps avoid the 25MB file size limit error
-[build]
-command = "npm run build"
-cwd = ""
-watch_dir = "src"
-
-[env.production]
-# Production environment variables can be set here
-NODE_VERSION = "18"
