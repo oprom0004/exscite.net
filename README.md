@@ -8,7 +8,20 @@
 - **语言**: TypeScript
 - **样式**: Tailwind CSS
 - **图标**: Lucide React
-- **部署**: 支持静态导出和服务器端渲染
+- **部署**: Cloudflare Pages（推荐）/ Vercel / 静态导出
+
+## ⚡ 快速部署到 Cloudflare Pages
+
+**3 步完成部署：**
+
+1. 访问 [Cloudflare Dashboard](https://dash.cloudflare.com/)
+2. Workers & Pages → Create → Pages → Connect to Git
+3. 选择仓库 `oprom0004/exscite.net`，配置：
+   - Framework: **Next.js**
+   - Build command: `npm run build`
+   - Build output: `.next`
+
+**详细指南**: 查看 [`DEPLOY-NOW.md`](./DEPLOY-NOW.md) 或 [`CLOUDFLARE-PAGES-DEPLOYMENT.md`](./CLOUDFLARE-PAGES-DEPLOYMENT.md)
 
 ## 📁 项目结构
 
@@ -35,6 +48,13 @@ exscite.net/
 │       ├── HeroSection.tsx                           # Hero 区块
 │       ├── IndustrialCard.tsx                        # 工业卡片
 │       └── StructuredData.tsx                        # JSON-LD 结构化数据
+├── public/                                           # 静态资源
+│   ├── favicon.svg                                   # SVG Favicon（闪电图标）
+│   ├── favicon.ico                                   # 备用 ICO Favicon
+│   ├── logo.svg                                      # 完整 Logo
+│   ├── manifest.json                                 # PWA Manifest
+│   ├── etm-6050c.mp4                                # Hero 视频
+│   └── _headers                                      # Cloudflare 安全头配置
 ├── next.config.mjs                                   # Next.js 配置
 ├── tailwind.config.ts                                # Tailwind 配置
 ├── tsconfig.json                                     # TypeScript 配置
