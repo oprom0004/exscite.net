@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:cf": "next build && node scripts/clean-build.js",
+    "clean:build": "node scripts/clean-build.js",
     "start": "next start",
     "lint": "next lint",
     "export": "next build",

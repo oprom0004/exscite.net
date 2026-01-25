@@ -18,10 +18,12 @@ Branch: main
 
 Build settings:
   Framework: Next.js
-  Build command: npm run build
+  Build command: npm run build:cf        ← 重要！使用清理版本
   Build output directory: .next
   Node version: 18.17.0
 ```
+
+**为什么用 `build:cf`？** 自动清理超过 25MB 的缓存文件，避免部署失败。
 
 点击 **Save and Deploy** → 等待 2-5 分钟 ✅
 
