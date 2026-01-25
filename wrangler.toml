@@ -1,0 +1,9 @@
+# Cloudflare Pages Configuration for Next.js
+name = "exscite-net"
+compatibility_date = "2026-01-20"
+
+# Pages configuration
+pages_build_output_dir = ".next"
+
+[env.production]
+# Production environment variables can be set here

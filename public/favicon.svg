@@ -1,0 +1,18 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- HighVolt.SYS Favicon - Simplified Lightning Bolt -->
+  <defs>
+    <linearGradient id="favicon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FACC15;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EF4444;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="32" height="32" fill="#0A0A0A" rx="4"/>
+  
+  <!-- Lightning Bolt -->
+  <path d="M 16 4 L 10 16 L 18 16 L 12 28 L 24 14 L 16 14 Z" 
+        fill="url(#favicon-gradient)" 
+        stroke="#FACC15" 
+        stroke-width="1"/>
+</svg>

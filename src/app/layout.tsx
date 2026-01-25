@@ -68,9 +68,14 @@ export const metadata: Metadata = {
     google: 'your-google-verification-code',
   },
   icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    apple: '/logo.svg',
+    shortcut: '/favicon.svg',
   },
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({
