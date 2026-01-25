@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Industrial Stripe Pattern */
+.hazard-stripe {
+  background: repeating-linear-gradient(
+    45deg,
+    #FACC15,
+    #FACC15 10px,
+    #000000 10px,
+    #000000 20px
+  );
+}
+
+/* Base styles */
+body {
+  @apply bg-gray-950 text-gray-100 antialiased;
+}

@@ -1,0 +1,20 @@
+{
+  "name": "HighVolt.SYS - High Voltage DC Power Supply Guide",
+  "short_name": "HighVolt.SYS",
+  "description": "Authoritative guide to programmable high voltage DC power supplies (600V-1000V)",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#FACC15",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["technology", "engineering", "industrial"],
+  "lang": "en-US"
+}

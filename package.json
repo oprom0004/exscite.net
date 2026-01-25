@@ -1,0 +1,38 @@
+{
+  "name": "exscite-high-voltage-dc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SEO-optimized Next.js site for high voltage DC power supply technical documentation",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build",
+    "seo-audit": "node \"I:/jp/code/h5games/shared-scripts/seo-audit-nextjs.cjs\"",
+    "lighthouse-check": "node \"I:/jp/code/h5games/shared-scripts/lighthouse-check.cjs\"",
+    "lighthouse-fix": "node \"I:/jp/code/h5games/shared-scripts/lighthouse-fix.cjs\"",
+    "lighthouse-cleanup": "node \"I:/jp/code/h5games/shared-scripts/lighthouse-cleanup.cjs\"",
+    "check-404": "node \"I:/jp/code/h5games/shared-scripts/check-404.cjs\""
+  },
+  "dependencies": {
+    "next": "^15.1.6",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "lucide-react": "^0.563.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "~5.6.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.15",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^15.1.6"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
