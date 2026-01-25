@@ -32,9 +32,9 @@ Project name: exscite-net
 Production branch: main
 
 Build settings:
-  Framework preset: Next.js
-  Build command: npm run build:cf        ← 使用清理版本！
-  Build output directory: .next
+  Framework preset: Next.js (Static HTML Export)
+  Build command: npm run build:cf
+  Build output directory: out            ← 静态导出输出目录！
   Root directory: / (留空或输入/)
 ```
 
@@ -58,10 +58,11 @@ Build settings:
 6. 修改：
 
 ```diff
-Framework preset: Next.js
+Framework preset: Next.js (Static HTML Export)
 - Build command: npm run build          ❌ 旧的
-+ Build command: npm run build:cf       ✅ 新的（清理缓存）
-Build output directory: .next
++ Build command: npm run build:cf       ✅ 新的
+- Build output directory: .next         ❌ 旧的（SSR 模式）
++ Build output directory: out           ✅ 新的（静态导出）
 Root directory: /
 ```
 
@@ -92,9 +93,12 @@ Root directory: /
 - 删除 `.next/trace` 文件
 - 最终输出 ~20-30 MB（符合 Cloudflare 限制）
 
-### 2. Build output directory: `.next`
+### 2. Build output directory: `out`
 
-Next.js 的构建输出目录，**不要修改**。
+Next.js 静态导出模式的输出目录，**必须设置为 out**。
+
+- ✅ 静态导出模式：`out`
+- ❌ SSR 模式：`.next`（Cloudflare Pages 不支持）
 
 ### 3. Root directory
 

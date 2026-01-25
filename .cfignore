@@ -1,10 +1,11 @@
 # Cloudflare Pages Ignore File
 # 排除不需要部署的文件，减少上传大小并避免超过 25MB 文件限制
 
-# Next.js Cache (构建缓存，不需要部署)
-.next/cache/
+# Next.js Build Directory (静态导出模式下不需要)
+.next/
 
 # Build traces (不需要运行时)
+.next/cache/
 .next/trace
 
 # Node modules (Cloudflare 会自动安装)

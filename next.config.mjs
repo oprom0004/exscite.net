@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // 启用静态导出模式 - Cloudflare Pages 必需
+  output: 'export',
+  
   reactStrictMode: true,
   typedRoutes: false,
   
@@ -8,9 +11,9 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   
-  // 图片优化配置
+  // 图片优化配置 - 静态导出需要禁用优化或使用 unoptimized
   images: {
-    formats: ['image/avif', 'image/webp'],
+    unoptimized: true,
   },
   
   // 优化输出
@@ -30,36 +33,7 @@ const nextConfig = {
     return 'exscite-net-build-' + new Date().getTime();
   },
   
-  // Headers 配置用于 SEO
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on'
-          },
-          {
-            key: 'Strict-Transport-Security',
-            value: 'max-age=63072000; includeSubDomains; preload'
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN'
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
-          }
-        ]
-      }
-    ];
-  },
+  // Headers 配置 - 静态导出时由 public/_headers 文件处理
 };
 
 export default nextConfig;

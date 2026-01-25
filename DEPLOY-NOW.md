@@ -17,13 +17,15 @@ Repository: oprom0004/exscite.net
 Branch: main
 
 Build settings:
-  Framework: Next.js
-  Build command: npm run build:cf        ← 重要！使用清理版本
-  Build output directory: .next
+  Framework: Next.js (Static HTML Export)
+  Build command: npm run build:cf
+  Build output directory: out            ← 重要！静态导出模式
   Node version: 18.17.0
 ```
 
-**为什么用 `build:cf`？** 自动清理超过 25MB 的缓存文件，避免部署失败。
+**关键配置说明：**
+- `build:cf` - 构建并清理缓存文件
+- `out` - 静态导出输出目录（不是 .next）
 
 点击 **Save and Deploy** → 等待 2-5 分钟 ✅
 
