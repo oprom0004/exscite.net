@@ -1,4 +1,4 @@
-High Voltage Variable DC Power Supply: The 2026 Industrial Guide
+**High Voltage Variable DC Power Supply**: The 2026 Industrial Guide
 Introduction:
 Operating above 600V introduces engineering challenges that do not exist in low-voltage circuits. At these potentials, insulation breakdown, arcing, and capacitive discharge become primary concerns.
 For decades, high voltage power supplies were analog, controlled by physical potentiometers that suffered from thermal drift. In 2026, the industrial standard has shifted. The modern [Link to Main Site: high voltage variable DC power supply] is digital, programmable, and integrated into safety-critical ATE (Automated Test Equipment) systems.
