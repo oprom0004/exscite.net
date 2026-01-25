@@ -1,5 +1,8 @@
 import { MetadataRoute } from 'next'
 
+// 静态导出模式必需配置
+export const dynamic = 'force-static'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://exscite.net'
   const currentDate = new Date()
