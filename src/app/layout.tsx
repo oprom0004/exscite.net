@@ -88,6 +88,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="manifest" href="/manifest.json" />
+        <script defer src="https://umamimy.vercel.app/script.js" data-website-id="5663e211-60ab-4e97-8bb6-795ad84f5740" />
       </head>
       <body className={`${inter.className} min-h-screen flex flex-col bg-hv-black text-gray-300 font-sans selection:bg-hv-yellow selection:text-black`}>
         {/* Google Analytics */}
